@@ -1,0 +1,667 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 530vh;
+    overflow-x: hidden;
+    background-size: cover;
+    background: rgba(22, 22, 22, 1);
+}
+
+.container {
+    position: relative;
+    box-shadow: 50px -50px 150em 15em rgba(0, 0, 0, 0.2) inset, -100px 0px 100em 100em rgba(5, 0, 0, 0.2) inset, 10px 10px 100em 100em rgba(0, 0, 0, 0.5) inset, -10000px 10px 100em 100em rgba(5, 5, 5, 0.1) inset;
+    background-size: 100% 100%;
+    margin: 0px;
+    height: 108vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+}
+
+.netflix-logo img {
+    width: 28vh;
+    height: 12vh;
+}
+
+.netflix-logo {
+    display: inline;
+}
+
+.netflix-logo img {
+    margin: 9px 0 0 19px;
+    background-color: transparent;
+    width: fit-content;
+}
+
+#logo-dropdown-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: wheat; */
+    width: 100%;
+    height: 15vh;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.language-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 20vw;
+    height: 10vh;
+    border-radius: 1px;
+}
+
+.language #sel {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-inline-start: 1.3rem;
+    color: rgba(255, 250, 250, 0.9);
+}
+
+
+/* adding down arrow to language select */
+
+.language::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 0.5em;
+    font-size: 0.82em;
+    color: rgba(255, 250, 250, 0.7);
+    pointer-events: none;
+}
+
+.language #sel {
+    appearance: none;
+    outline: 0;
+}
+
+.language {
+    position: relative;
+    display: flex;
+    line-height: 2.5;
+    background: #3a3d3d;
+    background-color: transparent;
+    border-radius: 0.2em;
+}
+
+.language img {
+    width: 0.9rem;
+    height: 0.9rem;
+    color: blue;
+    position: relative;
+    top: 0.69rem;
+    left: 1.22rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    filter: brightness(120%) contrast(90%);
+}
+
+.language-button #sel {
+    cursor: pointer;
+}
+
+.language-button select option {
+    background-color: #3a3d3d;
+    color: rgba(255, 250, 250, 0.7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+select {
+    width: 7vw;
+    height: 6vh;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6) inset, 0px -10px 10px rgba(0, 0, 0, 0.6) inset;
+    color: rgba(255, 250, 250, 0.9);
+}
+
+.button1 {
+    width: 7vw;
+    height: 6vh;
+    border-radius: 3px;
+    color: rgba(255, 250, 250, 0.9);
+    background-color: rgba(255, 10, 10, 0.9);
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+.text {
+    box-sizing: border-box;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    text-align: center;
+    width: 50vw;
+    color: whitesmoke;
+    top: 28%;
+}
+
+.headings {
+    word-break: break-all;
+}
+
+#H1 {
+    font-size: 50px;
+    font-family: "Manrope", sans-serif;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+.p2 {
+    margin-top: -20px;
+    font-size: 1.6em;
+}
+
+#p {
+    display: flex;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: auto;
+    margin-bottom: 9px;
+    font-family: "Manrope", sans-serif;
+    font-size: 1em;
+}
+
+.input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+input {
+    width: 30vw;
+    height: 10vh;
+    margin: 0px;
+    border: none;
+    align-self: flex-start;
+    font-size: 15px;
+    padding-left: 12px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0.8rem;
+    line-height: 4;
+    color: rgba(0, 0, 0, 0.6);
+    transition: 0.2s all;
+    pointer-events: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    height: fit-content;
+}
+
+.email:focus~label,
+.email:valid~label {
+    position: absolute;
+    font-size: 0.8rem;
+    outline: none;
+    top: -1em;
+    left: 0.7rem;
+    outline: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.email {
+    outline: none;
+    border: 1px solid blue;
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.btn {
+    display: flex;
+    box-sizing: border-box;
+    border: none;
+    width: 20vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 8, 3, 0.8);
+    border-radius: 2px;
+    color: white;
+    font-size: 1.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.btn:hover,
+.button1:hover,
+.language-button #sel:hover {
+    background-color: rgba(0, 0, 200, 0.3);
+    border: 1px solid blanchedalmond;
+    color: rgba(255, 250, 250, 0.9);
+    cursor: pointer;
+}
+
+.input .btn:after {
+    content: "\276D";
+    padding-left: 10px;
+    margin-top: -0.2em;
+    font-size: 22px;
+    text-align: center;
+}
+
+.btn-sign {
+    background-color: rgba(102, 8, 3, 0.8);
+    color: white;
+    line-height: 1.5;
+    font-size: 18px;
+    border: none;
+}
+
+.cards {
+    display: flex;
+    margin: 8px 0px;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: white;
+}
+
+.card1 {
+    display: grid;
+    grid: auto / 45% 55%;
+    height: 30em;
+    background-color: black;
+}
+
+.card1 .text-left {
+    margin: auto;
+    padding-left: 110px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card1 .text-left>h1 {
+    font-size: 42px;
+}
+
+.card1 .text-left>h3 {
+    font-size: 23px;
+}
+
+.card1 .image-right {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto;
+    height: 29em;
+    z-index: 1;
+}
+
+.card1 .image-right .animation {
+    box-sizing: border-box;
+    position: relative;
+    top: -46.7vh;
+    left: 4.9vw;
+    width: fit-content;
+    height: fit-content;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.card1 .image-right .animation video {
+    width: fit-content;
+    height: 13.1em;
+    z-index: 2;
+}
+
+.card1 .tv-image {
+    position: relative;
+    top: 1em;
+    box-sizing: border-box;
+    height: 24em;
+}
+
+.card2 {
+    display: grid;
+    grid: auto / 45% 55%;
+    height: 30em;
+    background-color: black;
+    margin-top: 8px;
+}
+
+.card2 .text-right {
+    margin: auto;
+    /* padding-left: 110px; */
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card2 .text-right>h1 {
+    font-size: 55px;
+}
+
+.card2 .text-right>h3 {
+    font-size: 25px;
+}
+
+.card2 .image-left {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.card2 .mobile-image {
+    margin-top: -2%;
+    box-sizing: border-box;
+    height: 24em;
+}
+
+.card2 .download-box {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    border-radius: 15px;
+    left: 18%;
+    bottom: 8%;
+    width: 64%;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    border: 2px solid grey;
+}
+
+.card2 .download-box .text-download {
+    margin: auto 2%;
+}
+
+.card2 .download-box .white-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    margin: auto;
+}
+
+.card2 .download-box .blue-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    font-size: 15px;
+    color: rgba(5, 10, 255, 1);
+    filter: brightness(1000%);
+}
+
+.card2 .download-box img {
+    margin: auto 5%;
+    height: 11vh;
+}
+
+.card3 {
+    display: grid;
+    grid: auto / 45% 55%;
+    height: 30em;
+    background-color: black;
+    margin-top: 8px;
+    z-index: 1;
+}
+
+.card3 .text-left {
+    margin: auto;
+    padding-left: 110px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card3 .text-left>h1 {
+    font-size: 49px;
+}
+
+.card3 .text-left>h3 {
+    font-size: 23px;
+}
+
+.card3 .image-right {
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+}
+
+.card3 .image-right .pc-image-card_3 {
+    box-sizing: border-box;
+    height: 26em;
+    z-index: 2;
+}
+
+.card3 .image-right video {
+    position: absolute;
+    top: -8%;
+    right: 20%;
+    height: 85%;
+    width: 61%;
+    z-index: -1;
+}
+
+.card4 {
+    display: grid;
+    grid: auto / 45% 55%;
+    height: 30em;
+    background-color: black;
+    margin-top: 8px;
+}
+
+.card4 .text-right {
+    margin: auto;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card4 .text-right>h1 {
+    font-size: 50px;
+}
+
+.card4 .text-right>h3 {
+    font-size: 25px;
+    width: 90%;
+    word-break: keep-all;
+}
+
+.card4 .image-left {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    margin-left: 20%;
+}
+
+.card4 .children-image {
+    margin-top: -2%;
+    box-sizing: border-box;
+    height: 24em;
+}
+
+.card4 .download-box img {
+    margin: auto 5%;
+    height: 11vh;
+}
+
+.card5 {
+    height: 37em;
+    margin-top: 8px;
+    background-color: black;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card5 h1 {
+    margin: 5%;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.card5 ul {
+    width: 65%;
+    list-style: none;
+    height: 100vh;
+    margin: -30px auto;
+}
+
+.card5 ul li {
+    display: flex;
+    box-sizing: border-box;
+    margin: 8px auto auto 17px;
+    background-color: rgba(61, 60, 60, 0.8);
+    color: whitesmoke;
+    padding: 0px 0px 0px 30px;
+    font-size: 1.2em;
+    height: 12%;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*  plus icon after frequently asked question */
+
+li .button::after {
+    content: "\253f";
+    font-size: 2em;
+    color: rgba(255, 250, 250, 0.7);
+}
+
+.FAQ .button {
+    position: relative;
+    right: 1.2rem;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+}
+
+.FAQ ul~p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: -5%;
+    background-color: transparent;
+}
+
+.card6 {
+    margin-top: 8px;
+    background-color: black;
+    height: 63vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.82em;
+}
+
+.card6 .copyright {
+    display: block;
+    text-align: left;
+    height: 100%;
+    width: 75%;
+    position: relative;
+    margin: auto;
+}
+
+.card6 .copyright .grid-copyright {
+    position: relative;
+    top: 2rem;
+    display: grid;
+    grid: auto auto/ auto auto auto;
+    /* border: 1px solid red; */
+    padding: 0px 6%;
+    row-gap: 0.9rem;
+    column-gap: 2rem;
+    color: whitesmoke;
+    height: 60%;
+}
+
+.card6 .copyright .grid-copyright .p1 {
+    grid-column: 1 / span3;
+    font-size: 1.5em;
+    opacity: 0.76;
+}
+
+.card6 .copyright .grid-copyright a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.6;
+    font-family: "Open Sans", sans-serif;
+    width: fit-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card6 .copyright .grid-copyright a:hover {
+    text-decoration: underline;
+}
+
+.card6 .copyright .grid-copyright a:focus {
+    color: grey;
+}
+
+.card6 .second-drop-down {
+    position: relative;
+    display: inline-block;
+    height: fit-content;
+    padding-left: 5em;
+    width: 50%;
+    top: 3.7em;
+}
+
+.card6 .second-drop-down .language {
+    width: fit-content;
+    height: 50%;
+    top: -0.5rem;
+}
+
+.card6 .second-drop-down .language #sel {
+    position: absolute;
+    top: 0;
+    left: -0.4em;
+    height: 4em;
+    width: 8em;
+    padding-inline-start: 2.2em;
+    line-height: 4;
+    font-size: 1.2em;
+    border-radius: 0.3em;
+    color: rgba(255, 250, 250, 0.7);
+}
+
+.card6 .second-drop-down .language #sel option {
+    position: absolute;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.card6 .second-drop-down .language .earth-logo {
+    position: absolute;
+    height: 1.2em;
+    top: 1.49rem;
+    left: 0.5rem;
+    filter: brightness(1);
+}
+
+.card6 .second-drop-down .language::after {
+    content: "\25BC";
+    position: relative;
+    top: 0;
+    left: 4.5em;
+    font-size: 1.2em;
+    line-height: 4.2;
+    color: rgba(255, 250, 250, 0.6);
+    pointer-events: none;
+}
+
+.card6 .second-drop-down p {
+    position: relative;
+    opacity: 0.7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    top: -0.5rem;
+    color: rgba(255, 250, 250, 0.7);
+}
