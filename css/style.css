@@ -85,7 +85,7 @@ body {
 .language {
     position: relative;
     display: flex;
-    line-height: 2.3;
+    line-height: 2.5;
     background: #3a3d3d;
     background-color: transparent;
     border-radius: 0.2em;
@@ -97,7 +97,7 @@ body {
     color: blue;
     position: relative;
     top: 0.69rem;
-    left: 1.22rem;
+    left: 1.20rem;
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     filter: brightness(120%) contrast(90%);
